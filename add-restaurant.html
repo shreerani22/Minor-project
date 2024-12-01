@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Restaurant - Crave Cart</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #ff6b6b;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        }
+        .form-section {
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ff6b6b;
+        }
+
+        .form-group {
+             margin-bottom: 20px;
+        }
+
+    .form-group label {
+         display: block;
+        ont-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+}
+
+    .form-group input[type="file"] {
+    border: none;
+    }
+
+    .form-group textarea {
+    resize: none;
+    }
+
+    .submit-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+    background-color: #ff4c4c;
+    }
+
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    }
+
+
+    </style>
+</head>
+
+
+<body>
+    <header class="navbar">
+        <div class="logo">CraveCart</div>
+        <!-- <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="add-restaurant.html">Add Restaurant</a></li>
+                <li></li>
+            </ul>
+        </nav> -->
+    </header>
+
+    <section class="col-lg-7 order-2 form-section">
+        <h1>Add a New Restaurant</h1>
+        <form id="addRestaurantForm">
+            <div class="form-group">
+                <label for="restaurantName">Restaurant Name:</label>
+                <input type="text" id="restaurantName" name="restaurantName" placeholder="Enter restaurant name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter restaurant location" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cuisine">Cuisine Type:</label>
+                <input type="text" id="cuisine" name="cuisine" placeholder="e.g., Italian, Indian, Chinese" required>
+            </div>
+
+            <div class="form-group">
+                <label for="foodImages">Upload Food Images:</label>
+                <input type="file" id="foodImages" name="foodImages" accept="image/*" multiple>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Enter a brief description about the restaurant" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Add Restaurant</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Crave Cart. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

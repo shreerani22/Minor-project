@@ -1,15 +1,15 @@
 
 *{
     box-sizing:content-box;
-    margin: 12;
-    padding: 6;
+    margin: 0;
+    padding: 0;
 }
-:root{
+/* :root{
     /* background color */
-    --primary-color: #e6e6fa;
-    --secondary-color:#854fee;
+    /* --primary-color: #e6e6fa; */
+    /* --secondary-color:#854fee; */
+ /* */ 
 
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 30;
 }
 
 /* 
@@ -36,6 +36,8 @@ body{
 a{
     text-decoration: none;
 }
+
+
 .header-wrapper{
     justify-content: center;
     padding-top:10%;
@@ -56,6 +58,11 @@ a{
     z-index: 1;
 }
 
+.banner-wrapper .food-gallery .food-item{
+    height: 350px;
+    width: 400px;
+}
+
 li {
     display: inline;
 }
@@ -68,7 +75,9 @@ a {
     box-sizing: border-box;
 }
 
-
+.menu{
+    padding: 40px 20px;
+}
 .login-container {
     background: #ffffff;
     padding: 150px 250px;

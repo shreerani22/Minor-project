@@ -24,18 +24,20 @@
                 <a class="navbar-brand" href="#">CraveCart</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
                 <i class="fa-solid fa-bars-staggered navbar-toggler-icon"></i>
             </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                
+                <span class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#restaurant">Add Restaurant</a>
-                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-restaurant.html">Add Restaurant</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#login">Log In</a>
                     </li>
@@ -47,25 +49,35 @@
                     </li>
 
                     </ul>
-              </div>
+                </span>
             </div>
           </nav>
     </header>
 
     <!-- Banner -->
-    <section id="home" class="banner-wrapper" >
+    <section id="home" class="banner-wrapper">
         <div class="container-fluid">
             <div class="row justify-content-center" >
                 <div class="col-lg-7 order-2 banner-content">
+                    <h1>Welcome to the CraveCart </h1>
                     <h1 class=" hung text-uppercase">Feeling hungry !!! </h1>
                     <h2 class="text-uppercase">Discover the best food & drinks in Ranchi .</h2>
-                   
+                    <p>Delicious food delivered to your doorstep</p>
+                    
                     <div class="mt-5">
                         <a class="main-btn primary-btn" href="#">Order Now !! </a>
                     </div>
-                    <div class="location_box">
+
+                    <div class="location">
+                        <div class="location-box">
+                            <label for="location"> <i class="fa-solid fa-location-dot"></i>  Enter your address :</label>
+                            <input type="text" id="location" placeholder="Pin Code">
+                            <button>Search</button>
+                        </div>    
+                    </div>
+                
                         <div>
-                            <i class="fa-solid fa-location-dot"></i>
+                            
                         </div>
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234447.15613692976!2d85.1561622912358!3d23.343433463630014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e104aa5db7dd%3A0xdc09d49d6899f43e!2sRanchi%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1731863688045!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -76,12 +88,87 @@
         </div>
     </section>
 
+    <section id="menu" class="banner-wrapper">
+        <h1 style="background-color:lightblue;">Our Menu</h1>
+        <span class="container-fluid">
+            <!-- <div class="justify-content-center" > -->
+            <span class="food-item">
+                <ul>
+                    <li>
+                        <img src="food/pizza.jpg" alt="Pizza" style="height: 330px; width: 340px;">
+                        <h3>Pizza</h3>
+                        <p>Starting at 99</p>
+                    </li>
+
+                    <li>
+                        <img src="food/burger.jpg" alt="Burger" style="height: 330px; width: 340px;">
+                        <h3>Burger</h3>
+                        <p>Starting at 49</p>
+                        
+                    </li>
+
+                    <li>
+                        <!-- <div class="food-item"> -->
+                        <img src="food/pasta.jpg" alt="Pasta" style="height: 330px; width: 340px;">
+                        <h3>Pasta</h3>
+                        <p>Starting at 120</p>
+                        <!-- </div> -->
+                    </li>
+                    <li>
+                        <!-- <div class="food-item"> -->
+                            <img src="food/desserts.jpg" alt="Desserts" style="height: 330px; width: 340px;">
+                            <h3>Desserts</h3>
+                            <p>Starting at 300</p>
+                        <!-- </div> -->
+                    </li>
+                </ul>  
+            </span>    
+            <!-- </div> -->
+        </span>   
+        
+        </div>
+    </section>
+
+
     <!-- <section id="restaurant" class="banner-wrapper" >
         <div class="container-fluid p-3">
             <div class="row">
                 <div class="col-lg-7 order-2 banner-content">
                     <h1>Want to book a Table !</h1>
                     <img src="restro3.jpg" alt="">
+
+                    <section class="form-section">
+                        <h1>Add a New Restaurant</h1>
+                        <form id="addRestaurantForm">
+                            <div class="form-group">
+                                <label for="restaurantName">Restaurant Name:</label>
+                                <input type="text" id="restaurantName" name="restaurantName" placeholder="Enter restaurant name" required>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="location">Location:</label>
+                                <input type="text" id="location" name="location" placeholder="Enter restaurant location" required>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="cuisine">Cuisine Type:</label>
+                                <input type="text" id="cuisine" name="cuisine" placeholder="e.g., Italian, Indian, Chinese" required>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="foodImages">Upload Food Images:</label>
+                                <input type="file" id="foodImages" name="foodImages" accept="image/*" multiple>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea id="description" name="description" rows="4" placeholder="Enter a brief description about the restaurant" required></textarea>
+                            </div>
+                
+                            <button type="submit" class="submit-btn">Add Restaurant</button>
+                        </form>
+                    </section>
+
                 </div>
             </div>
             
@@ -167,7 +254,11 @@
         </div>
     </section>
 
+    <footer>
+        <p>&copy; 2024 Crave Cart. All Rights Reserved.</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
